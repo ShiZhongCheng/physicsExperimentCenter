@@ -1,0 +1,41 @@
+<!--admin.wxml-->
+<view class="personnel">
+    <view data-role="0" bindtap="getRoleData" class="personnel_list line">
+      <view class="personnel_list_title">学生人数</view>
+      <view class="personnel_list_number">{{user_data.student}}</view>
+    </view>
+    <view data-role="1" bindtap="getRoleData" class="personnel_list line">
+      <view class="personnel_list_title">教师人数</view>
+      <view class="personnel_list_number">{{user_data.teacher}}</view>
+    </view>
+    <view data-role="2" bindtap="getRoleData" class="personnel_list">
+      <view class="personnel_list_title">管理员人数</view>
+      <view class="personnel_list_number">{{user_data.administrator}}</view>
+    </view>
+    <view style="clear: both;"></view>
+</view>
+
+<!-- 动态管理  -->
+<view class="dynamic">
+  <view class="dynamic_title">
+    <view style="float: left;">所有动态如下：</view>
+    <view bindtap="newdisplay" style="float: right; color: #80BEF7;">发布新动态</view>
+  </view>
+  
+  <view wx:for="{{dynamic_data}}" wx:for-index="idx" wx:for-item="that">
+    <view class="newKaPa">
+      <image data-id="{{that.id}}" bindtap="display" class="newKaPa-img" src="{{that.img}}"></image>
+      <view class="newKaPa-text">
+        <view class="newKaPa-text-title">{{that.title}}
+          <view class="newKaPa-text-time">{{that.time}}</view>
+        </view> {{that.content}} </view>
+        <view class="button_mange">
+          <view wx:if="{{that.status == 1}}" class="but" style="color: #FF9800;">在线中</view>
+          <view wx:if="{{that.status != 1}}" class="but" style=";color: #eee;">已下线</view>
+          <view data-id="{{that.id}}" data-tp="0" bindtap="conLine" wx:if="{{that.status == 1}}" class="but" style="background: #FF9800;color: #fff;">下线</view>
+          <view data-id="{{that.id}}" data-tp="1" bindtap="conLine" wx:if="{{that.status != 1}}" class="but" style="background: #FF9800;color: #fff;">上线</view>
+        </view>
+    </view>
+  </view>
+
+</view>

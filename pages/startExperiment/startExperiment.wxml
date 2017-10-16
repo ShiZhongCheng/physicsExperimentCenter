@@ -1,0 +1,25 @@
+<view class="container">
+    <view class="conTop">
+        <image class="conTopImage" src="{{myMesg.headImageUrl}}"></image>
+        <text class="nickName">{{userInfo.nickName}}</text>
+        <view class="myMesg">
+            <text class="myName">姓名：{{myMesg.name}}</text>
+            <text class="myPhoneNumber">电话：{{myMesg.phonenumber}}</text>
+            <text class="myStudentId">学号：{{myMesg.studentID}}</text>
+        </view>
+    </view>
+    <view class="conBottom">
+        <text class="exId conText">实验id：{{rs.ex_id}}</text>
+        <text class="phyName conText">实验名称：{{rs.phy_name}}</text>
+        <text class="phyClassRoom conText">实验教室：{{rs.classroomnumber}}</text>
+        <text class="phyUseTeacher conText">实验教师：{{rs.useteacher}}</text>
+        <text class="bianHao conText" data-bianhao="{{bianhao}}">当前编号：{{bianhao}}</text>
+        <text class="phyLimite conText">人数限制：限制为{{rs.limite}}人</text>
+        <text class="sum conText">当前使用：{{sum}}人在用</text>
+    </view>
+        <text class="warm conText">请先核对信息，再进行其他操作</text>
+        <!--<button data-yqid="{{yqid}}" data-openid="{{openid}}" data-name="{{myMesg.name}}" data-ex_id="{{rs.ex_id}}" data-classroomnumber="{{rs.classroomnumber}}" data-bianhao="{{bianhao}}" style="background:{{bk}}" data-sum="{{sum}}" data-limite="{{rs.limite}}" bindtap="iSure" class="iSure" type="primary">{{iSure}}</button>-->
+</view>
+<form data-yqid="{{yqid}}" data-openid="{{openid}}" data-name="{{myMesg.name}}" data-ex_id="{{rs.ex_id}}" data-classroomnumber="{{rs.classroomnumber}}" data-bianhao="{{bianhao}}" data-useteacher="{{rs.useteacher}}" data-phy_name="{{rs.phy_name}}" style="background:{{bk}}" data-sum="{{sum}}" data-limite="{{rs.limite}}" name='pushMsgFm' report-submit='true' bindsubmit='iSure'>  
+    <button form-type="submit" class="iSure" style="background:{{bk}}" type="primary">{{iSure}}</button>
+</form>  

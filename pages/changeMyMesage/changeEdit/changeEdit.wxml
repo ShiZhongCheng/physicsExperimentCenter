@@ -1,0 +1,8 @@
+<form class="xgForm" bindsubmit="formSubmit">
+  <view id='formView' bindtap='bindButtonTap'>
+    <input id='INPUT' name="value" placeholder="请输入{{text}}..." type="{{shutype}}" confirm-type="done" focus="{{focus}}"></input>
+  </view>
+  <view id='formSuccess'>
+    <button id='ISure' formType="submit">确认</button>
+  </view>
+</form>

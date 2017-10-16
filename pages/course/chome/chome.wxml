@@ -1,0 +1,43 @@
+<!--chome.wxml-->
+<view class="top_box">
+  <view class="bg_img">
+    <image wx:if="{{bgimg}}" class="bgimg" src="https://www.goooooo.top/{{bgimg}}"></image>
+  </view>
+</view>
+
+<view wx:if="{{myMesg.class_number != ''}}" class="my_classs">
+  <view style="float: left; width: 50%; text-align: right;">我的班级：</view>
+  <input bindblur="bindblur" style="float: left; width: 50%; text-align: left; height: 80rpx; line-height: 80rpx;" type="number" value="{{myMesg.class_number}}"/>
+</view>
+<view wx:else class="my_course_else_box">
+  <view class="my_course_else">
+    <view style="float: left; width: 50%; text-align: right;">我的班级：</view>
+    <input auto-focus bindblur="bindblur" style="float: left; width: 50%; text-align: left; height: 80rpx; line-height: 80rpx;" type="number" placeholder="输入你的班级号"/>
+  </view>
+</view>
+
+<!-- 课程列表  -->
+<view class="course_box">
+  <view class="course_list" wx:for="{{course_data}}" wx:for-index="idx" wx:for-item="listData">
+    <view wx:if="{{listData.video_url != ''}}" data-phy_id="{{listData.phy_id}}" data-phy_movie_leng="{{listData.phy_movie_leng}}" data-explain_people="{{listData.explain_people}}" data-img_url="{{listData.img_url}}" data-video_url="{{listData.video_url}}" bindtap="gotoCourse">
+      <image class="course_list_img" src="https://www.goooooo.top/{{listData.img_url}}"></image>
+      <view class="course_name">{{listData.phy_name}}</view>
+      <view class="course_class">{{listData.classroomnumber}}</view>
+      <view style="color: #ff9600;" class="static">已上传视频</view>
+      <view wx:for="{{finishedVideo}}" wx:for-item="video">
+        <view wx:if="{{listData.phy_id == video}}" style="color: #ff9600; top: 0;" class="static">已看</view>
+      </view>
+    </view>
+    <view wx:if="{{listData.phy_movie_leng == 0}}" data-phy_id="{{listData.phy_id}}">
+      <image class="course_list_img" src="https://www.goooooo.top/{{listData.img_url}}"></image>
+      <view class="course_name">{{listData.phy_name}}</view>
+      <view class="course_class">{{listData.classroomnumber}}</view>
+      <view style="color: #CECECE;" class="static">视频待上传</view>
+    </view>
+  </view>
+  <view style="Clear: both;"></view>
+</view>
+
+<view class="my_course">
+  <image class="my_course_img" src="../../../images/tab_categories2.png"></image>
+</view>

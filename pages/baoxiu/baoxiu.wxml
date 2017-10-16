@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{myMesg.headImageUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+</view>
+
+ <view class="baoxiu" style="display:{{display1}};">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="baoXiuName">
+        <label>报修人姓名：</label>
+        <input name="name" class="baoXiuNameInput" disabled="true" value="{{myMesg.name}}"/>
+      </view>
+      <view class="baoXiuName">
+        <label>联系方式：</label>
+        <input name="phoneNumber" class="baoXiuNameInput" disabled="true" value="{{myMesg.phonenumber}}"/>
+      </view>
+      <view class="baoXiuName">
+        <label>仪器初步情况：</label>
+        <textarea bindfocus="bindfocus" name="message" value="{{message}}" class="baoXiuNameTextarea"/>
+      </view>
+      <view class="baoXiuName">
+        <label>仪器编号：</label>
+        <input name="yqid" class="baoXiuNameInput" disabled="true" value="{{yqid}}"/>
+      </view>
+      <input class="displayNone" name="openid" value="{{openid}}"></input>
+      <button class="button" formType="submit">提交</button>
+    </form>
+  </view>
+
+  <textarea auto-focus bindblur="bindblur" bindconfirm="bindconfirm" style="display:{{display2}};" value="{{message}}" class="baoXiuTextarea"/>

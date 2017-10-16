@@ -1,0 +1,36 @@
+<view class="container">
+  <image wx:if="{{mybg}}" class='container-img' src="https://www.goooooo.top/{{mybg}}"></image>
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{myMesg.headImageUrl}}" background-size="cover"></image>
+    <view class="userinfo-nickname">{{myMesg.nickname}}</view>
+  </view>
+</view>
+
+<!--竖线  -->
+<view class="line_box">
+
+  <!--功能区-->
+  <view class="functionChoose">
+    <view class="line"></view>
+    <view class="myMesg">
+      <image bindtap="changeMyMesage" class="xiugai1" src="../../images/29.png"></image>
+      <view class="myText1">修改我的信息</view>
+      <view class="littler_cir"></view>
+    </view>
+    <view class="myMesg">
+      <image bindtap="showMyEx" class="xiugai2" src="../../images/18.png"></image>
+      <view class="myText2">我的实验记录</view>
+      <view class="littler_cir"></view>
+    </view>
+    <view wx:if="{{myMesg.role == 1}}" data-role="{{myMesg.role}}" class="myMesg">
+      <image bindtap="imTeacher" class="xiugai3" src="../../images/9.png"></image>
+      <view class="myText3">我是教师</view>
+      <view class="littler_cir"></view>
+    </view>
+    <view wx:if="{{myMesg.role == 1 || myMesg.role == 2}}" data-role="{{myMesg.role}}" class="myMesg">
+      <image bindtap="ImAdministrator" class="xiugai2" src="../../images/8.png"></image>
+      <view class="myText2">我是管理员</view>
+      <view class="littler_cir"></view>
+    </view>
+  </view>
+</view>

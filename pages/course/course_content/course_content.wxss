@@ -1,0 +1,143 @@
+/* course_content.wxss */
+page{
+  background: #eee;
+}
+.conter{
+  width: 100%;
+  position: relative;
+}
+.video_box{
+  width: 100%;
+  margin: 0 auto;
+}
+video{
+  width: 100%;
+  z-index: 999;
+}
+.btn-area{
+  position: relative;
+}
+.dan_mu_input{
+  width: 100%;
+  margin-top: 15rpx;
+  margin: 0 auto;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-indent: 2em;
+  font-size: 13px;
+  background: #fff;
+}
+.percentage{
+  width: 150rpx;
+  overflow: hidden;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ff9600;
+  line-height: 70rpx;
+  font-size: 13px;
+  z-index: 100;
+}
+.fabu{
+  width: 100%;
+  height: 100rpx;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  line-height: 100rpx;
+  background: #80BEF7;
+  margin-top: 10rpx;
+}
+.switch{
+  position: absolute;
+  top: 0;
+  right: 5rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+/* 主讲教师 */
+.explain_people{
+  width: 600rpx;
+  height: 170rpx;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 1px #CECECE;
+  position: relative;
+  margin-top: 40rpx;
+  background: #fff;
+}
+.explain_people_img{
+  width:110rpx;
+  height:110rpx;
+  border-radius:50%;
+  margin:29rpx;
+}
+.explain_people_title{
+  position: absolute;
+  top: 0;
+  left: 190rpx;
+  line-height: 90rpx;
+  font-size: 13px;
+}
+.explain_people_con{
+  position: absolute;
+  top: 85rpx;
+  left: 190rpx;
+  line-height: 50rpx;
+  font-size: 13px;
+}
+
+/* 说明 */
+.statment{
+  width: 100%;
+  margin-top: 150rpx;
+}
+.line{
+  background: #CECECE;
+  height: 1px;
+}
+.statment_con{
+  font-size: 9px;
+  color: #CECECE;
+  width: 360rpx;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: -7px;
+  padding: 5rpx;
+  background: #eee;
+}
+
+/* 弹窗 */
+.tan_pin_box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 1000;
+}
+.tan_pin{
+  width: 500rpx;
+  height: 600rpx;
+  margin: 0 auto;
+  margin-top: 35%;
+  position: relative;
+  box-shadow: 0 0 10px 1px #80BEF7;
+  background: #fff;
+  border-radius: 5px;
+}
+.tan_img{
+  width: 100%;
+  height: 100%;
+}
+.hidde{
+  position: absolute;
+  top: 0;
+  right: 15rpx;
+  font-size: 15px;
+  line-height: 100rpx;
+  color: #ff9600;
+}

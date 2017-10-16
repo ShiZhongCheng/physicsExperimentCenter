@@ -1,0 +1,66 @@
+.container{
+  padding:  0;
+  background-color: #80BEF7;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #fff;
+  font-size: 13px;
+  font-family: 微软雅黑;
+  margin-bottom: 15rpx;
+}
+
+.name-box{
+  width: 390rpx;
+  height: 60rpx;
+  margin: 0 auto;
+  margin-top: 100rpx;
+  position: relative;
+}
+.nameExplain{
+  padding: 15rpx;
+  /*line-height: 60rpx;*/
+  text-align: center;
+  font-size: 13px;
+  font-family: 微软雅黑;
+  background: #80BEF7;
+  color: #fff;
+  border-radius: 30rpx;
+}
+.nameInput{
+  position: absolute;
+  top: 0;
+  left: 111rpx;
+  border-bottom: 1px #80BEF7 solid;
+  width: 320rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 15px;
+  color: #80BEF7;
+  font-family: 微软雅黑;
+}
+.submit{
+  margin-top: 90rpx;
+  width: 410rpx;
+  background: #80BEF7;
+  color: #fff;
+  font-family: 微软雅黑;
+  font-size: 15px;
+  border: 0;
+}
+.displayNone{
+  display: none;
+}

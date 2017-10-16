@@ -1,0 +1,32 @@
+<!--course_content.wxml-->
+<view class="conter" style="display: {{videoDisplay}};">
+  <view class="video_box">
+    <video id="myVideo" bindplay="bindplay" bindpause="bindpause" bindtimeupdate="bindtimeupdate" src="{{src}}" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+  </view>
+  <view class="btn-area">
+    <input class="dan_mu_input" bindblur="bindInputBlur" placeholder="在这里输入内容"/>
+    <view class="percentage">{{ifOk}}%</view>
+    <view class="fabu" bindtap="bindSendDanmu">发送弹幕</view>
+    <switch color="#ff9600" style="margin-top: 77rpx;" type="switch" class="switch" bindchange="switchChange"/>
+  </view>
+  <!-- 视频解说人 -->
+  <view class="explain_people">
+    <image class="explain_people_img" src="https://www.goooooo.top/{{img_url}}"></image>
+    <view class="explain_people_title">主讲教师</view>
+    <view class="explain_people_con">{{explain_people}}</view>
+  </view>
+
+  <!-- 说明 -->
+  <view class="statment">
+    <view class="line"></view>
+    <view class="statment_con">只有看视频时间达到90%以上才会记录</view>
+  </view>
+</view>
+
+<!-- 观看成功弹屏  -->
+<view wx:if="{{idx == 1}}" class="tan_pin_box">
+  <view class="tan_pin">
+    <image class="tan_img" src="../../../images/movie_ok.png"></image>
+    <view class="hidde" bindtap="tanChanHiden">隐藏</view>
+  </view>
+</view>

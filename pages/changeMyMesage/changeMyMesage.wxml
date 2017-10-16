@@ -1,0 +1,33 @@
+<form bindsubmit="sureButton" bindreset="formReset">
+  <view class="form-box">
+    <view class="info info-headImg" bindtap="changeHeaderImg">
+      <view class="info-lab">头像：</view>
+      <image class="info-input info-headerImg" name="headImageUrl" src="{{userMeg.headImageUrl}}"></image>
+    </view>
+
+    <view class="info info-borderBottom" bindtap='changeJump' data-ctype='nickname'>
+      <view class="info-lab">昵称：</view>
+      <view class="info-input">{{userMeg.nickname}}</view>
+    </view>
+
+    <view class="info info-borderBottom" bindtap='changeJump' data-ctype='name'>
+      <view class="info-lab">姓名：</view>
+      <view class="info-input">{{userMeg.name}}</view>
+    </view>
+
+    <view class="info info-borderBottom" bindtap='changeJump' data-ctype='	studentID'>
+      <view class="info-lab">学号：</view>
+      <view class="info-input">{{userMeg.studentID}}</view>
+    </view>
+
+    <view class="info info-borderBottom" bindtap='changeJump' data-ctype='phonenumber'>
+      <view class="info-lab">电话：</view>
+      <view class="info-input">{{userMeg.phonenumber}}</view>
+    </view>
+
+    <view class="info" bindtap='changeJump' data-ctype='class_number'>
+      <view class="info-lab">我的班级：</view>
+      <view class="info-input">{{userMeg.class_number}}</view>
+    </view>
+  </view>
+</form>

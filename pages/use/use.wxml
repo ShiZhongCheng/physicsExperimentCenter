@@ -1,0 +1,10 @@
+<view class="bigCirer" animation="{{animationData}}"></view>
+
+<view class="contain">
+    <view bindtap="startEx" class="butUseYq"><view class="but_text1">开始实验</view></view>
+    <view bindtap="baoXiu" class="butBaoXiu"><view class="but_text2">仪器报修</view></view>
+    <view class="text"><view class="but_text3">{{yqid}}</view></view>
+    <view bindtap="askTeacherHelp" class="askTeacherHelp"><view class="but_text4">呼叫</view></view>
+</view>
+
+<view class="littlerCirer"></view>

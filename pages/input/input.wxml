@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+</view>
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="name-box">
+    <text class="nameExplain">姓名：</text> 
+    <input name="name" class="nameInput" type="text"/>
+  </view>
+  <view class="name-box">
+    <text class="nameExplain">学号：</text> 
+    <input name="studentId" class="nameInput" type="number"/>
+  </view>
+  <view class="name-box">
+    <text class="nameExplain">电话：</text> 
+    <input name="phoneNumber" class="nameInput" type="number"/>
+  </view>
+  <input class="displayNone" name="openid" value="{{openid}}"></input>
+  <button class="submit" formType="submit">提交</button>
+</form>

@@ -1,0 +1,33 @@
+ <!--通告栏-->
+<view class="announcement">
+  <view wx:if="{{warmingData[0].bianhao > 0}}" class="announcement_mesg">编号<text style="color: red;">{{warmingData[0].bianhao}}</text>有同学请求老师帮助</view>
+  <view wx:if="{{warmingData[1].bianhao > 0}}" class="announcement_mesg">编号<text style="color: red;">{{warmingData[1].bianhao}}</text>有同学请求老师帮助</view>
+  <view wx:if="{{warmingData[2].bianhao > 0}}" class="announcement_mesg">编号<text style="color: red;">{{warmingData[2].bianhao}}</text>有同学请求老师帮助</view>
+</view>
+
+<!--内容区-->
+<scroll-view class="soroll" scroll-y="true">
+  <view class="soroll-contain">
+    <block wx:for="{{arry}}">
+      <view bindtap="setbianhao" data-bianhao="{{item}}" style="background: {{dataarr[index].bgcolor}};color: {{dataarr[index].textcolor}}" class="contain-box">{{item}}</view>
+    </block>
+  </view>
+  <view class="big-stament">
+    <view class="stament">实验名称：{{phy_name}}</view>
+    <view class="stament">实验id：{{ex_id}}</view>
+  </view>
+  <view class="navigateBack" bindtap="navigateBack">返回上一页</view>
+</scroll-view>
+
+<!--弹出窗口-->
+<view class="fullScreen" style="display: {{display}};">
+  <view bindtap="closeFullScreen" class="but_x">X</view>
+  <block wx:for="{{redata}}">
+    <view bindtap="endPeople" data-openid="{{item.oppenid}}" style="border: 1px red solid; color: red;" class="student_name" wx:if="{{ item.bianhao == bianhao && item.end_time == 0}}">
+      {{item.name}}
+    </view>
+     <view style="border: 1px #fff solid; color: #fff;" class="student_name" wx:if="{{ item.bianhao == bianhao && item.end_time != 0}}">
+      {{item.name}}
+    </view>
+  </block>
+</view>

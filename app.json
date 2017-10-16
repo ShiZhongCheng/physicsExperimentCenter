@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/use/use",
+    "pages/startExperiment/startExperiment",
+    "pages/input/input",
+    "pages/my/my",
+    "pages/help/help",
+    "pages/baoxiu/baoxiu",
+    "pages/changeMyMesage/changeMyMesage",
+    "pages/showMyEx/showMyEx",
+    "pages/teacher/teacher",
+    "pages/shishi/shishi",
+    "pages/admin/administrator/administrator",
+    "pages/admin/display/display",
+    "pages/admin/roleShow/roleShow",
+    "pages/admin/newdisplay/newdisplay",
+    "pages/course/chome/chome",
+    "pages/course/course_content/course_content",
+    "pages/changeMyMesage/changeEdit/changeEdit"
+  ],
+  "window": {
+    "backgroundColor": "#eee",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#80BEF7",
+    "navigationBarTitleText": "HDU物理实验中心",
+    "navigationBarTextStyle": "#fff",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#80BEF7",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/help/help",
+        "text": "问答区"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

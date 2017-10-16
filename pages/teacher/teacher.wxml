@@ -1,0 +1,123 @@
+<view class="function">
+  <view bindtap="list1" class="scroll-view-item function-list {{choose.list1}}">使用记录</view>
+  <view bindtap="list2" class="scroll-view-item function-list {{choose.list2}}">使用教室</view>
+  <view bindtap="list3" class="scroll-view-item function-list {{choose.list3}}">报修记录</view>
+  <view bindtap="list4" class="scroll-view-item function-list {{choose.list4}}">新建实验</view>
+</view>
+
+<!--第一个滑动区域-->
+<scroll-view wx:if="{{choose.list1 == 'choosed'}}" class="list-soroll" scroll-y="true">
+  <view class="list-soroll-contain">
+    <block wx:for="{{clRUHis}}">
+      <view class="myList">
+        <view class="mesgTop">
+          <!--<view class="grade">{{item}}</view>-->
+          <view class="phyName">{{item.phy_name}}</view>
+        </view>
+        <view class="messageBar">
+          <view class="mesg">实验ID：{{item.ex_id}}</view>
+          <view class="mesg">教室：{{item.classroomnumber}}</view>
+          <view class="mesg">实验时间：{{item.ex_id[0]}}{{item.ex_id[1]}}{{item.ex_id[2]}}{{item.ex_id[3]}}/{{item.ex_id[4]}}{{item.ex_id[5]}}/{{item.ex_id[6]}}{{item.ex_id[7]}}</view>
+          <view class="mesg">人数限制：{{item.limite}}</view>
+        </view>
+        <view class="button-box">
+          <!--实验状态-->
+          <view wx:if="{{item.isend == 0}}" bindtap="endEx" data-phyid="{{item.phy_id}}" data-exid="{{item.ex_id}}" class="state1 state">实验中</view>
+          <view wx:else class="state2 state">已结束</view>
+          <!--实时情况-->
+          <view wx:if="{{item.isend == 0}}" bindtap="shishiqk" data-phyid="{{item.phy_id}}" data-exid="{{item.ex_id}}" data-phyname="{{item.phy_name}}" class="state3 state">实时情况</view>
+           <view wx:else class="state3 state" style="color: #000;">实时情况</view>
+          <!--统计-->
+          <view bindtap="setClipboardData" data-phyid="{{item.phy_id}}" data-exid="{{item.ex_id}}" data-phyname="{{item.phy_name}}" class="state4 state">统计</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</scroll-view>
+
+<!--第二个滑动区域-->
+<scroll-view wx:if="{{choose.list2 == 'choosed'}}" class="list-soroll" scroll-y="true">
+  <view class="list-soroll-contain">
+    <form bindsubmit="formSubmitUseCRoom">
+      <view class="teacher-name form-list">
+        <view class="form-labe">教师姓名：</view>
+        <input name="useteacher" disabled="true" class="form-contain" value="{{myMesg.name}}"/>
+      </view>
+      <view class="teacher-phy-name form-list">
+        <view class="form-labe">实验名称：</view>
+        <!--<input class="form-contain" value="电表改装"/>-->
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{phyNameArray}}">
+          <view name="phy_name" value="{{ex_array[index].phy_name}}" class="form-contain picker">{{ex_array[index].phy_name}}</view>
+          <input style="display: none;" name="phy_name" value="{{ex_array[index].phy_name}}" />
+          <input style="display: none;" name="phy_id" value="{{ex_array[index].phy_id}}" />
+        </picker>
+      </view>
+      <view class="teacher-ex-id form-list">
+        <view class="form-labe">实验id(唯一)：</view>
+        <input name="ex_id" disabled="true" class="form-contain" value="{{nowDate}}"/>
+      </view>
+      <view class="teacher-limist form-list">
+        <view class="form-labe">人数限制：</view>
+        <!--<input name="limite" class="form-contain" placeholder="请输入人数限制"/>-->
+        <picker bindchange="limistPickerChange" value="{{lim_index}}" range="{{limist_array}}">
+          <view value="{{limist_array[lim_index]}}" class="form-contain picker">{{limist_array[lim_index]}}</view>
+          <input style="display: none;" name="limite" value="{{limist_array[lim_index]}}" />
+        </picker>
+      </view>
+      <view class="teacher-description form-list">
+        <view class="form-labe">实验说明：</view>
+        <textarea name="Description" class="form-contain description" placeholder="请输入实验说明（非必须）"/>
+      </view>
+      <input style="display: none;" name="openid" value="{{openid}}" />
+      <button formType="submit" class="info-button" type="primary">提交</button>
+    </form>
+  </view>
+</scroll-view>
+
+<!--第三个滑动区域-->
+<scroll-view wx:if="{{choose.list3 == 'choosed'}}" class="list-soroll" scroll-y="true">
+  <view class="list-soroll-contain">
+    <block wx:for="{{bao_xiu_data}}">
+      <!--<view class="baoxiu_list">
+        <view class="baoxiu_list_itam">{{item}}</view>
+      </view>-->
+      <view class="myList">
+        <view class="mesgTop">
+          <!--<view class="grade">{{item}}</view>-->
+          <view class="phyName phyName4">ID:{{item.id}}</view>
+        </view>
+        <view class="messageBar">
+          <view class="mesg">保修人：{{item.name}}</view>
+          <view class="mesg">联系方式：{{item.phonenumber}}</view>
+          <view class="mesg">仪器编号：{{item.yqid}}</view>
+          <view class="mesg">报修时间：{{item.time}}</view>
+          <view  class="mesg xiangxiMesg">详细信息：{{item.message}}</view>
+        </view>
+        <view class="button-box">
+          <!--报修状态-->
+          <view wx:if="{{item.flag == 0}}" bindtap="sureBaoXiu" data-id="{{item.id}}" class="state5 state">确认报修</view>
+          <view wx:else class="state6 state">已结束</view>
+          <!--详细信息-->
+          <view bindtap="xiangxiMesg" data-mesg="{{item.message}}" class="state7 state">详细信息</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</scroll-view>
+
+<!--第四个滑动区域-->
+<scroll-view wx:if="{{choose.list4 == 'choosed'}}" class="list-soroll" scroll-y="true">
+  <view class="list-soroll-contain">
+    <form bindsubmit="newEx" bindreset="formReset">
+      <view class="form-list fl4">
+        <view class="form-labe">实验名称：</view>
+        <input name="phy_name" class="form-contain" placeholder="请输入要创建的实验名称" />
+      </view>
+      <view class="form-list">
+        <view class="form-labe">实验教室：</view>
+        <input name="classroomnumber" class="form-contain" placeholder="请输入教室" />
+      </view>
+      <button formType="submit" class="info-button" type="primary">确认</button>
+    </form>
+  </view>
+</scroll-view>

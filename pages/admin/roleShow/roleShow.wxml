@@ -1,0 +1,19 @@
+<!--roleShow.wxml-->
+<view class="box">
+  <view class="list">
+      <view class="content">id</view>
+      <view class="content">姓名</view>
+      <view class="content">学工号</view>
+      <view class="content">电话号码</view>
+      <view style="clear:both;"></view>
+    </view>
+  <view wx:for="{{roleData}}" wx:for-index="idx" wx:for-item="that" class="list_box">
+    <view class="list">
+      <view class="content">{{that.id}}</view>
+      <view class="content">{{that.name}}</view>
+      <view class="content">{{that.studentID}}</view>
+      <view class="content">{{that.phonenumber}}</view>
+      <view style="clear:both;"></view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+    "navigationBarBackgroundColor": "#80BEF7",
+    "navigationBarTitleText": "开始实验",
+    "navigationBarTextStyle":"#fff",
+    "enablePullDownRefresh": false,
+    "backgroundTextStyle": "dark"
+  }

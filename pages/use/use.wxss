@@ -1,0 +1,97 @@
+page {
+  width: 100%;
+  height: 100%;
+  background:#eee;
+}
+
+.contain{
+    width: 505rpx;
+    height: 505rpx;
+    padding: 25rpx;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    border-radius: 50%;
+}
+.bigCirer{
+  width: 505rpx;
+  height: 505rpx;
+  padding: 25rpx;
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  border-radius: 50%;
+  box-shadow: 6rpx -1rpx 10rpx 6rpx #80BEF7;
+}
+.littlerCirer{
+    width:190rpx;
+    height:190rpx;
+    border-radius:50%;
+    position:absolute;
+    top:41%;
+    left:39%;
+    background:#fff;
+    box-shadow:0px 0px 5rpx 5rpx #C9E3FC;
+}
+
+.text{
+    float: left;
+    margin: 1rpx 1rpx 0 0;
+    width: 250rpx;
+    height: 250rpx;
+    border-radius: 0 0 0 100%;
+    line-height: 220rpx;
+    background-color: #80BEF7;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+}
+.askTeacherHelp{
+    float: left;
+    margin: 1rpx 0 0 1rpx;
+    width: 250rpx;
+    height: 250rpx;
+    border-radius: 0 0 100% 0;
+    line-height: 220rpx;
+    background-color: #80BEF7;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+}
+.butUseYq{
+    float: left;
+    margin: 0 1rpx 1rpx 0;
+    width: 250rpx;
+    height: 250rpx;
+    border-radius: 100% 0 0 0;
+    line-height: 220rpx;
+    background-color: #80BEF7;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+}
+.butBaoXiu{
+    float: left;
+    margin: 0 0 1rpx 1rpx;
+    width: 250rpx;
+    height: 250rpx;
+    border-radius: 0 100% 0 0;
+    line-height: 220rpx;
+    background-color: #80BEF7;
+    color: #fff;  
+    text-align: center;  
+    font-size: 15px;
+}
+
+.but_text1{
+  transform:rotate(-45deg);
+}
+.but_text2{
+  transform:rotate(45deg);
+}
+.but_text3{
+  transform:rotate(45deg);
+}
+.but_text4{
+  transform:rotate(-45deg);
+}

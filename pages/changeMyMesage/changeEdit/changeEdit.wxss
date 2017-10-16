@@ -1,0 +1,21 @@
+/* pages/changeMyMesage/changeEdit/changeEdit.wxss */
+page{
+  background: #eee;
+}
+input{
+  width: 95%;
+  background: #fff;
+  margin: 0 auto;
+}
+#formView{
+    height: 400rpx;
+    background: #fff;
+}
+#formSuccess{
+  height: 80rpx;
+}
+#ISure{
+  color: #80BEF7;
+  border-radius: 0;
+  background: #fff;
+}

@@ -1,0 +1,74 @@
+.container{
+  padding: 0;
+}
+.conTop{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #80BEF7;
+  color: #fff;
+  padding-bottom: 30rpx;
+}
+.conTopImage{
+  width: 128rpx;
+  height: 128rpx;
+  margin: 30rpx;
+  border-radius: 50%;
+}
+.nickName{
+  width: 128rpx; 
+  margin-left: 20rpx;
+  border: 1px #fff solid;
+  border-radius: 15px;
+  font-size: 10px;
+  font-family: 微软雅黑;
+  text-align: center;
+}
+.myMesg{
+  position: absolute;
+  top: 60rpx;
+  left: 310rpx;
+  height: 128rpx;
+  width: 300rpx;
+}
+.myName{
+  font-size: 15px;
+  font-family: 微软雅黑;
+}
+.myPhoneNumber{
+  position: absolute;
+  top: 40rpx;
+  left: 0;
+  font-size: 15px;
+  font-family: 微软雅黑;
+}
+.myStudentId{
+  position: absolute;
+  top: 80rpx;
+  left: 0;
+  font-size: 15px;
+  font-family: 微软雅黑;
+}
+
+.conBottom{
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+  font-family: 微软雅黑;
+}
+.conText{
+  margin-bottom: 10rpx; 
+  font-size: 15px;
+}
+.warm{
+  margin: 15rpx;
+  font-size: 10px;
+  color: #aaa;
+  font-family: 微软雅黑;
+}
+
+.iSure{
+  width: 180pt;
+  color: #fff;
+  margin-top: 60rpx; 
+}

@@ -1,0 +1,171 @@
+page {
+  width: 100%;
+  height: 100%;
+  background:#fff;
+}
+
+.container{
+  padding:  0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 350rpx;
+  z-index: 10001;
+}
+.container-img{
+  width: 100%;
+  height: 350rpx;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -64rpx;
+  box-shadow:0 0 4rpx 8rpx #fff;
+}
+.userinfo-nickname {
+  color: #fff;
+  font-size: 20px;
+  font-family: 微软雅黑;
+  text-align: center;
+  position: absolute;
+  top: 140rpx;
+}
+.userinfo-text{
+  position: absolute;
+  top: 25rpx;
+  left: 300rpx;
+}
+/*姓名*/
+.userinfo-name{
+  color: #fff;
+  font-size: 14px;
+  font-family: 微软雅黑;
+  margin-bottom: 15rpx;
+}
+/*学号*/
+.userinfo-studentId{
+  color: #fff;
+  font-size: 14px;
+  font-family: 微软雅黑;
+  margin-bottom: 15rpx;
+}
+/*电话*/
+.userinfo-phonenumber{
+  color: #fff;
+  font-size: 14px;
+  font-family: 微软雅黑;
+}
+
+/*功能区*/
+.functionChoose{
+  width: 100%;
+  position: absolute;
+  top: 400rpx;
+}
+.myMesg{
+  width: 60%;
+  margin: 0 auto;
+  height: 100rpx;
+  margin-top: 25rpx;
+  margin-bottom: 75rpx;
+  padding: 15rpx;
+  position: relative;
+}
+.xiugai1{
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 10rpx;
+  border-radius: 50%;
+  box-shadow: 0 0 1px 1px #80BEF7;
+  padding: 4rpx;
+  position: absolute;
+  right: 50rpx;
+  z-index: 10000;
+}
+.myText1{
+  position: absolute;
+  top:  0;
+  left: 0;
+  height: 130rpx;
+  line-height: 130rpx;
+  font-size: 12px;
+  font-family: 微软雅黑;
+}
+.xiugai2{
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 10rpx;
+  border-radius: 50%;
+  box-shadow: 0 0 1px 1px #80BEF7;
+  padding: 4rpx;
+  position: absolute;
+  left: 50rpx;
+  z-index: 10000;
+}
+.myText2{
+  position: absolute;
+  top:  0;
+  right: 0;
+  height: 130rpx;
+  line-height: 130rpx;
+  font-size: 12px;
+  font-family: 微软雅黑;
+}
+.xiugai3{
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 10rpx;
+  border-radius: 50%;
+  box-shadow: 0 0 1px 1px #80BEF7;
+  padding: 4rpx;
+  position: absolute;
+  right: 50rpx;
+  z-index: 10000;
+}
+.myText3{
+  position: absolute;
+  top:  0;
+  left: 35rpx;
+  height: 130rpx;
+  line-height: 130rpx;
+  font-size: 12px;
+  font-family: 微软雅黑;
+}
+
+/*小圆点  */
+.littler_cir{
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 50%;
+  background: #80BEF7;
+  margin: 0 auto;
+  margin-top: 40rpx;
+}
+
+/*竖线  */
+.line_box{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.line{
+  width: 1px;
+  background: #eee;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+}
+
+
+
+
+

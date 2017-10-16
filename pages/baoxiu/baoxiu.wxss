@@ -1,0 +1,65 @@
+.container{
+  padding:  0;
+  background-color: #80BEF7;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #fff;
+  font-size: 13px;
+  font-family: 微软雅黑;
+  margin-bottom: 15rpx;
+}
+
+.baoXiuName{
+  width: 75%;
+  font-size: 13px;
+  font-family: 微软雅黑;
+  margin: 0 auto;
+  margin-top: 60rpx;
+}
+.baoXiuNameInput{
+  border: 1px #80BEF7 solid;
+  margin-top: 10rpx;
+  border-radius: 40rpx;
+  text-align: center;
+  background: #fff;
+}
+.baoXiuNameTextarea{
+  border: 1px #80BEF7 solid;
+  margin-top: 10rpx;
+  border-radius: 25rpx;
+  text-align: center;
+  background: #fff;
+}
+.button{
+  width: 350rpx;
+  background: #80BEF7;
+  color: #fff;
+  font-family: 微软雅黑;
+  font-size: 15px;
+  border: 0;
+  margin-top: 70rpx;
+  margin-bottom: 70rpx;
+}
+.baoXiuTextarea{
+  width: 90%;
+  margin: 0 auto;
+  border: 1px #80BEF7 solid;
+  margin-top: 30rpx;
+  background: #fff;
+}
+.displayNone{
+  display: none;
+}

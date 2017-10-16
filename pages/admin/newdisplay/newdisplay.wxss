@@ -1,0 +1,40 @@
+/* newdisplay.wxss */
+page{
+  background: #eee;
+}
+.form_box{
+}
+.uploadimg{
+  max-width: 320rpx;
+  max-height: 320rpx;
+  margin: 0 auto;
+}
+input{
+  background: #fff;
+  text-indent: 2em;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 12px;
+  border-radius: 5px;
+}
+textarea{
+  background: #fff;
+  text-indent: 2em;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.section__title{
+  line-height: 70rpx;
+  font-size: 16px;
+}
+.section{
+  margin: 20rpx;
+}
+.btn-area{
+  margin: 20rpx;
+}
+button{
+  border: 0;
+  background: #80BEF7;
+  color: #fff;
+}

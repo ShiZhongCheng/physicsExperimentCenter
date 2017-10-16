@@ -1,0 +1,29 @@
+<!--newdisplay.wxml-->
+<view class="form_box">
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section section_gap">
+    <view class="section__title">动态标题</view>
+    <input name="title"/>
+  </view>
+
+  <view class="section section_gap">
+    <view class="section__title">上传图片</view>
+    <image class="uploadimg" bindtap="previewImage" src="{{imgalist}}" data-src="{{imgalist}}"></image>  
+  </view>
+
+  <view class="section section_gap">
+    <view class="section__title">动态内容</view>
+    <textarea name="content" />
+  </view>
+
+  <view class="section section_gap">
+    <view class="section__title">发布者</view>
+    <input name="announcer"/>
+  </view>
+
+  <view class="btn-area">
+    <button formType="submit">确认发布</button>
+    <button formType="reset">撤销</button>
+  </view>
+</form>
+</view>

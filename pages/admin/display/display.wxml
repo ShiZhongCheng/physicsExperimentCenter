@@ -1,0 +1,10 @@
+<!--display.wxml-->
+<view class="box">
+  <view class="title">{{display_data.title}}</view>
+  <view class="img_box">
+    <image class="img" src="{{display_data.img}}"></image>
+  </view>
+  <view class="content">{{display_data.content}}</view>
+  <view class="time">{{display_data.time}}</view>
+  <view class="announcer">{{display_data.announcer}}</view>
+</view>

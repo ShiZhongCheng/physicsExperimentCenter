@@ -1,0 +1,21 @@
+/* roleShow.wxss */
+page{
+  background: #eee;
+}
+.box{
+  width: 95%;
+  background: #fff;
+  margin: 0 auto;
+}
+.list{
+  width: 100%;
+}
+.content{
+  width: 24.6%;
+  float: left;
+  text-align: center;
+  font-size: 12px;
+  border: 1px #eee solid;
+  border-right: 0;
+  border-bottom: 0;
+}

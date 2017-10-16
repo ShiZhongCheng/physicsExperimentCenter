@@ -1,0 +1,189 @@
+page {
+  width: 100%;
+  height: 100%;
+  background:#eee;
+}
+
+.function{
+  width: 100%;
+  height: 80rpx;
+  background: #eee;
+  border-bottom: 1rpx #B4B4B4 solid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.function-list{
+  width: 25%;
+  height: 80rpx;
+  float: left;
+  line-height: 80rpx;
+  font-family: 微软雅黑;
+  font-size: 12px;
+  text-align: center;
+}
+.choosed{
+  color: #80BEF7;
+}
+
+/*滑动区域*/
+.list-soroll{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.list-soroll-contain{
+  position: absolute;
+  top: 80rpx;
+  width: 100%;
+}
+/*第一个卡片*/
+.myList{
+  width: 90%;
+  height: 500rpx; 
+  margin: 0 auto;
+  margin-top: 25rpx;
+  margin-bottom: 25rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  position: relative;
+}
+.mesgTop{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1px #eee solid;
+}
+.grade{
+  position: absolute;
+  top: 0;
+  left: 20rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-family: 微软雅黑;
+  font-size: 15px;
+}
+.phyName{
+  position: absolute;
+  top: 0;
+  left: 180rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-family: 微软雅黑;
+  font-size: 15px;
+}
+.messageBar{
+  position: absolute;
+  top: 145rpx;
+  left: 30rpx;
+}
+.mesg{
+  margin-bottom: 15rpx;
+  font-family: 微软雅黑;
+  font-size: 12px;
+}
+.button-box{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.state{
+  float: left;
+  height:  60rpx;
+  line-height: 60rpx;
+  width: 33.33%;
+  border-top: 1px #eee solid;
+  text-align: center;
+  font-family: 微软雅黑;
+  font-size: 15px;
+}
+.state1{
+  color: red;
+}
+.state2{
+  border-radius: 0 0 0 15rpx;
+}
+.state3{
+ color: #80BEF7;
+}
+.state4{
+ color: #80BEF7;
+}
+
+/*第二个卡片*/
+.form-list{
+  height: 90rpx;
+  background: #fff;
+  border-bottom: 1px #eee solid;
+  position: relative;
+}
+.form-labe{
+  position: absolute;
+  top: 0;
+  left: 40rpx;
+  width: 200rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-family: 微软雅黑;
+  font-size: 14px;
+}
+.form-contain{
+  position: absolute;
+  top: 0;
+  left: 250rpx;
+  width: 250rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-family: 微软雅黑;
+  font-size: 14px;
+}
+/*实验说明*/
+.teacher-description{
+  height: 200rpx;
+}
+.description{
+  width: 350rpx;
+  height: 200rpx;
+}
+.info-button{
+  width: 400rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-top: 250rpx;
+  background: #80BEF7;
+}
+button[type="primary"] {
+  color:#FFFFFF;
+  background-color:#80BEF7;
+}
+
+/*报修记录*/
+.phyName4{
+  width: 100rpx;
+  left: 300rpx;
+}
+.state5{
+  width: 50%;
+  color: red;
+}
+.state6{
+  width: 50%;
+}
+.state7{
+  width: 50%;
+}
+.xiangxiMesg{
+  width: 600rpx;
+  overflow: hidden;
+}
+
+/*新建实验*/
+.fl4{
+  margin-top: 50rpx;
+}

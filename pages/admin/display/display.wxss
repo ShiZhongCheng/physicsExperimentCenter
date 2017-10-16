@@ -1,0 +1,41 @@
+/* display.wxss */
+.box{
+  padding: 15rpx;
+}
+.title{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: 20px;
+  color: #004AB5;
+  text-align: center;
+  margin-top: 20rpx;
+  margin-bottom: 15rpx;
+}
+.img_box{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+image {
+  max-width: 100%;
+}
+.content{
+  font-size: 12px;
+  text-indent: 2em;
+  line-height: 25px;
+}
+.time{
+  text-align: right;
+  font-size: 12px;
+  line-height: 25px;
+  padding-right: 20rpx;
+}
+.announcer{
+  text-align: right;
+  font-size: 12px;
+  line-height: 25px;
+  margin-bottom: 30rpx;
+  padding-right: 20rpx;
+}

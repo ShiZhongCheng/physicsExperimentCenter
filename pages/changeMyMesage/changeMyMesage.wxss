@@ -1,0 +1,51 @@
+page {
+  width: 100%;
+  height: 100%;
+  background:#eee;
+}
+.info{
+  height: 100rpx;
+  position: relative;
+  background: #fff;
+}
+.info-borderBottom{
+  border-bottom: 1px #eee solid;
+}
+.info-headImg{
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.info-lab{
+  height: 100rpx;
+  position: absolute;
+  top: 0;
+  left: 50rpx;
+  line-height: 100rpx;
+}
+.info-input{
+  height: 100rpx;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  color: #686868;
+  line-height: 100rpx;
+  text-align:right;
+  font-size: 12px;
+}
+.info-headerImg{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-top:16rpx;
+}
+.info-button{
+  width: 400rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-top: 250rpx;
+  background: #80BEF7;
+}
+button[type="primary"] {
+  color:#FFFFFF;
+  background-color:#80BEF7;
+}

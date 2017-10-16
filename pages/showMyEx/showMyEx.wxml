@@ -1,0 +1,20 @@
+<scroll-view class="scrollZone" scroll-y="true">
+  <block wx:for="{{myUseHistory}}">
+    <view class="myList">
+        <view class="mesgTop">
+          <!--<view class="grade">{{item}}</view>-->
+          <view class="phyName">{{item.phy_name}}</view>
+        </view>
+        <view class="messageBar">
+          <view class="teacherName mesg">教师：{{item.teachername}}</view>
+          <view class="classRoomNumber mesg">教室：{{item.classroomnumber}}</view>
+          <view class="bainHao mesg">编号：{{item.bianhao}}</view>
+          <view class="startTime mesg">开始时间：{{item.start_time}}</view>
+          <view wx:if="{{item.end_time == 0}}" class="allUseTime mesg">结束时间：实验中</view>
+          <view wx:else class="allUseTime mesg">结束时间：{{item.end_time}}</view>
+        </view>
+        <view wx:if="{{item.end_time == 0}}" class="state1">实验中</view>
+        <view wx:else class="state2">已结束</view>
+    </view>
+  </block>
+</scroll-view>
